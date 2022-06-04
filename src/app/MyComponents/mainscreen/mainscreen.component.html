@@ -1,0 +1,18 @@
+<div class="container">
+    <button class="btn btn-sm btn-primary" (click)="onClickSignin()">SignIn</button>
+    <button class="btn btn-sm btn-primary" (click)="onClickSignup()">SignUp</button>
+
+    <ng-template *ngIf="signin; else compA">
+    </ng-template>
+
+    <ng-template *ngIf="signUp; else compB">
+    </ng-template>
+
+    <ng-template #compB> 
+        <app-signin></app-signin>
+
+    </ng-template>  
+    <ng-template #compA> 
+        <app-signup></app-signup>
+    </ng-template>  
+</div>
